@@ -37,17 +37,17 @@ Class UserController extends Controller {
         if($user){
             foreach ($user as $name){
                 if($password == $name->password ){
-                    echo '<script>alert("Welcome!")</script>';
+                    echo '<script>alert("WELCOME!")</script>';
                     return view('login');
                 }
                 else{
-                    echo '<script>alert("Incorrect Credentials")</script>';
+                    echo '<script>alert("INCORRECT CREDENTIALS")</script>';
                     return view('login');
                 }   
             }  
         }
         else{
-            echo '<script>alert("Incorrect Credentials")</script>';
+            echo '<script>alert("INCORRECT CREDENTIALS")</script>';
             return view('login');
         }
     }
@@ -73,7 +73,7 @@ Class UserController extends Controller {
             return $this->successResponse($users);
         }
         else{
-           return $this->errorResponse('User not Found',Response::HTTP_NOT_FOUND);
+           return $this->errorResponse('USER NOT FOUND',Response::HTTP_NOT_FOUND);
         }
 
     }
@@ -109,7 +109,7 @@ Class UserController extends Controller {
             $user->delete();
             return $this->successResponse($user);}
         else{
-            return $this->errorResponse('User ID Does NOT Exists', Response::HTTP_NOT_FOUND);
+            return $this->errorResponse('USER NOT FOUND', Response::HTTP_NOT_FOUND);
         }
     }
 
