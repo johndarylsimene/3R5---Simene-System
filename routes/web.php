@@ -16,7 +16,10 @@ $router->get('/', function () use ($router) {
 });
 // unsecure routes
 $router->group(['prefix' => 'api'], function () use ($router) {
+   //========================= SETUP CODE ===============================//
    // $router->get('/users',['uses' => 'UserController@getUsers']);
+    
+    // =================LOGIN AND CRUD CODE ==============================//
     $router->get('/login', ['uses' => 'UserController@login']);
     $router->post('/validation', ['uses' => 'UserController@validation']); 
     $router->get('/users', ['uses' => 'UserController@show']);
