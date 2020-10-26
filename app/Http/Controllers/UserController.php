@@ -16,6 +16,8 @@ Class UserController extends Controller {
     public function __construct(Request $request){
         $this->request = $request;
     }
+	
+	//================================================ SETUP CODE =======================================================//
     // public function getUsers(){
     //     $users = DB::connection('mysql') ->select("Select * from tbluser");
     //     return response()->json($users, 200);
